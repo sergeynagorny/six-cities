@@ -1,25 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import LoginPage from './pages/login-page';
+import FavoritesPage from './pages/favorites-page';
+import MainPage from './pages/main-page';
+import PropertyPage from './pages/property-page';
+
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+export enum AppPath {
+  HOME = "/",
+  LOGIN = "/login",
+  PROPERTY = "/property",
+  FAVORITES = "/favorites",
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path={AppPath.HOME} component={MainPage} exact />
+        <Route path={AppPath.LOGIN} component={LoginPage} />
+        <Route path={AppPath.PROPERTY} component={PropertyPage} />
+        <Route path={AppPath.FAVORITES} component={FavoritesPage} />
+      </Switch>
+    </Router>
   );
 }
 
