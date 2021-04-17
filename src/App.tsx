@@ -1,30 +1,12 @@
 import React from 'react';
-import './App.css';
-import LoginPage from './pages/login-page';
-import FavoritesPage from './pages/favorites-page';
-import MainPage from './pages/main-page';
-import PropertyPage from './pages/property-page';
-
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
-export enum AppPath {
-  HOME = "/",
-  LOGIN = "/login",
-  PROPERTY = "/property",
-  FAVORITES = "/favorites",
-}
+import { BrowserRouter as Router } from "react-router-dom";
+import { routes } from './pages';
+import { renderRoutes } from '@lib/render-routes/index';
 
 function App() {
-  return (
-    <Router>
-      <Switch>
-        <Route path={AppPath.HOME} component={MainPage} exact />
-        <Route path={AppPath.LOGIN} component={LoginPage} />
-        <Route path={AppPath.PROPERTY} component={PropertyPage} />
-        <Route path={AppPath.FAVORITES} component={FavoritesPage} />
-      </Switch>
-    </Router>
-  );
+  const isAuthenticated = false;
+  
+  return <Router>{renderRoutes(routes, isAuthenticated)}</Router>;
 }
 
 export default App;
