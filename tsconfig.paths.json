@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@features/*": ["src/features/*"],
+      "@images/*": ["src/assets/img/*"],
+      "@mock/*": ["src/mock/*"],
+      "@pages/*": ["src/pages/*"],
+      "@lib/*": ["src/lib/*"],
+    }
+  }
+}
