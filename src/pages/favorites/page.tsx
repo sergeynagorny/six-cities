@@ -1,24 +1,11 @@
 import React from 'react';
-import Header from './../features/header/header';
-import Footer from './../features/footer/footer';
-import PlacesCardFavorites from '../features/places-card-favorites/places-card-favorites';
-import TabItem from './../features/tab-item/tab-item';
-import {
-  mockPlacesCards,
-  mockPlacesCardsMap,
-  mockFavoritePlaces,
-} from "../mock/mock";
+import Header from '@features/header/header';
+import Footer from '@features/footer/footer';
+import PlacesCardFavorites from '@features/places-card-favorites/places-card-favorites';
+import TabItem from '@features/tab-item/tab-item';
+import { mockFavoritePlaces } from "@mock/mock";
 
 const FavoritesPage = () => {
-
-
-  console.log(mockFavoritePlaces);
-
-  // console.log(mockFavoritePlacesCards);
-  // console.log(mockPlacesCardsMap);
-  // console.log(Array.from(mockPlacesCardsMap));
-
-
   return (
     <>
       <div style={{ display: "none" }}>

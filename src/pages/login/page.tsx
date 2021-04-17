@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from './../features/header/header';
-import TabItem from './../features/tab-item/tab-item';
-import LoginForm from '../features/login-form/login-form';
+import Header from '@features/header/header';
+import TabItem from '@features/tab-item/tab-item';
+import LoginForm from '@features/login-form/login-form';
 
 const LoginPage = () => {
   return (

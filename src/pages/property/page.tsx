@@ -1,10 +1,12 @@
 import React from 'react';
-import CommentsForm from '../features/comments/comments-form/comments-form';
-import Footer from '../features/footer/footer';
-import Header from './../features/header/header';
-import FavoriteButton from './../features/favorite-button/favorite-button';
-import Rating from '../features/rating/rating';
-import PlaceMark from '../features/place-mark/place-mark';
+import CommentsForm from '@features/comments/comments-form/comments-form';
+import Footer from '@features/footer/footer';
+import Header from '@features/header/header';
+import FavoriteButton from '@features/favorite-button/favorite-button';
+import Rating from '@features/rating/rating';
+import PlaceMark from '@features/place-mark/place-mark';
+import CommentItem from '@features/comments/comment-item/comment-item';
+import PrivateRouter from '@features/private-router/private-router';
 
 const PropertyPage = () => {
   return (
@@ -40,42 +42,42 @@ const PropertyPage = () => {
                 <div className="property__image-wrapper">
                   <img
                     className="property__image"
-                    src="img/room.jpg"
+                    src="/img/room.jpg"
                     alt="Studio"
                   />
                 </div>
                 <div className="property__image-wrapper">
                   <img
                     className="property__image"
-                    src="img/apartment-01.jpg"
+                    src="/img/apartment-01.jpg"
                     alt="Studio"
                   />
                 </div>
                 <div className="property__image-wrapper">
                   <img
                     className="property__image"
-                    src="img/apartment-02.jpg"
+                    src="/img/apartment-02.jpg"
                     alt="Studio"
                   />
                 </div>
                 <div className="property__image-wrapper">
                   <img
                     className="property__image"
-                    src="img/apartment-03.jpg"
+                    src="/img/apartment-03.jpg"
                     alt="Studio"
                   />
                 </div>
                 <div className="property__image-wrapper">
                   <img
                     className="property__image"
-                    src="img/studio-01.jpg"
+                    src="/img/studio-01.jpg"
                     alt="Studio"
                   />
                 </div>
                 <div className="property__image-wrapper">
                   <img
                     className="property__image"
-                    src="img/apartment-01.jpg"
+                    src="/img/apartment-01.jpg"
                     alt="Studio"
                   />
                 </div>
@@ -83,8 +85,7 @@ const PropertyPage = () => {
             </div>
             <div className="property__container container">
               <div className="property__wrapper">
-
-                <PlaceMark className={'property'} />
+                <PlaceMark className={"property"} />
 
                 <div className="property__name-wrapper">
                   <h1 className="property__name">
@@ -114,7 +115,7 @@ const PropertyPage = () => {
 
                 <div className="property__price">
                   <b className="property__price-value">€120</b>
-                  <span className="property__price-text">/&nbsp;night</span>
+                  <span className="property__price-text">&nbsp;night</span>
                 </div>
 
                 <div className="property__inside">
@@ -138,7 +139,7 @@ const PropertyPage = () => {
                     <div className="property__avatar-wrapper property__avatar-wrapper--pro user__avatar-wrapper">
                       <img
                         className="property__avatar user__avatar"
-                        src="img/avatar-angelina.jpg"
+                        src="/img/avatar-angelina.jpg"
                         width={74}
                         height={74}
                         alt="Host avatar"
@@ -165,39 +166,13 @@ const PropertyPage = () => {
                   <h2 className="reviews__title">
                     Reviews · <span className="reviews__amount">1</span>
                   </h2>
+                  
                   <ul className="reviews__list">
-                    <li className="reviews__item">
-                      <div className="reviews__user user">
-                        <div className="reviews__avatar-wrapper user__avatar-wrapper">
-                          <img
-                            className="reviews__avatar user__avatar"
-                            src="img/avatar-max.jpg"
-                            width={54}
-                            height={54}
-                            alt="Reviews avatar"
-                          />
-                        </div>
-                        <span className="reviews__user-name">Max</span>
-                      </div>
-                      <div className="reviews__info">
-                        <div className="reviews__rating rating">
-                          <div className="reviews__stars rating__stars">
-                            <span style={{ width: "94%" }} />
-                            <span className="visually-hidden">Rating</span>
-                          </div>
-                        </div>
-                        <p className="reviews__text">
-                          A quiet cozy and picturesque that hides behind a a
-                          river by the unique lightness of Amsterdam. The
-                          building is green and from 18th century.
-                        </p>
-                        <time className="reviews__time" dateTime="2019-04-24">
-                          April 2019
-                        </time>
-                      </div>
-                    </li>
+                    <CommentItem />
                   </ul>
 
+                  {/* тут штука аля приватный роутер, только с компонентом */}
+                  
                   <CommentsForm />
                 </section>
               </div>

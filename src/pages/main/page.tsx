@@ -1,12 +1,14 @@
 import React from 'react';
-import Header from './../features/header/header';
-import TabList from './../features/tab-list/tab-list';
-import MainEmpty from './../features/main-empty/main-empty';
-import PlacesCardCities from './../features/places-card-cities/places-card-cities';
-import PlacesSort from './../features/places-sort/places-sort';
-import { mockPlacesCards } from "./../mock/mock";
+import Header from '@features/header/header';
+import TabList from '@features/tab-list/tab-list';
+import MainEmpty from "@features/main-empty/main-empty";
+import PlacesCardCities from '@features/places-card-cities/places-card-cities';
+import PlacesSort from '@features/places-sort/places-sort';
+import { mockPlacesCards } from "@mock/mock";
 
-const MainPage = () => {
+const MainPage = (props: any) => {
+  console.log(props);
+
   return (
     <>
       <div style={{ display: "none" }}>
