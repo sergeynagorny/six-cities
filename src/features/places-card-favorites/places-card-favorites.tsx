@@ -1,7 +1,7 @@
 import React from 'react';
-import FavoriteButton from '../favorite-button/favorite-button';
-import PlaceMark from '../place-mark/place-mark';
-import Rating from '../rating/rating';
+import FavoriteButton from "@features/favorite-button/favorite-button";
+import PlaceMark from "@features/place-mark/place-mark";
+import Rating from "@features/rating/rating";
 
 interface IPlaces {
   name: string;
