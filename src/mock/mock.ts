@@ -24,7 +24,7 @@ const getMockPlacesCard = () => ({
   type: getRandomValueFromArray(placesTypes),
   image: getRandomValueFromArray(placesImages),
   price: getRandomInteger(100, 500),
-  rating: getRandomInteger(0, 50) / 10,
+  rating: getRandomInteger(10, 50) / 10,
   isFavorite: getRandomBoolean(),
   isPremium: getRandomBoolean(),
 })
@@ -39,3 +39,5 @@ const getFavoritePlaces = (array: any[]) => (
 )
 
 export const mockFavoritePlaces = getFavoritePlaces(Array.from(mockPlacesCardsMap));
+export const mockCities = Array.from(mockPlacesCardsMap.keys());
+export const mockCitiesPaths = mockCities.map((city) => `/` + city.toLowerCase());
