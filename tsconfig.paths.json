@@ -2,6 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
+      "@api/*": ["src/api/*"],
       "@features/*": ["src/features/*"],
       "@images/*": ["src/assets/img/*"],
       "@mock/*": ["src/mock/*"],
